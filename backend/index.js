@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const serverless = require("serverless-http");
+
 require("dotenv").config();
 const port = process.env.PORT;
 app.get("/", (req, res) => {
@@ -10,4 +10,3 @@ app.get("/", (req, res) => {
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
-module.exports = serverless(app);
